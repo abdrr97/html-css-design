@@ -1,0 +1,261 @@
+/* 
+- Primary Red: hsl(0, 100%, 68%)
+- Very Dark Blue: hsl(230, 29%, 20%)
+- Dark Grayish Blue: hsl(230, 11%, 40%)
+- Grayish Blue: hsl(231, 7%, 65%)
+- Light Grayish Blue: hsl(207, 33%, 95%) 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* outline: none; */
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    padding-left: 10rem;
+}
+
+/* header */
+header,
+nav {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    display: flex;
+}
+
+h1,
+button {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+}
+
+header {
+    justify-content: space-between;
+    padding: 70px 0;
+    padding-right: 10rem;
+}
+
+nav {
+    justify-content: space-around;
+    min-width: 450px;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+nav a:last-child {
+    color: hsl(231, 7%, 65%);
+}
+
+nav a {
+    color: hsl(230, 11%, 40%);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.dot {
+    background: hsla(235, 7%, 65%, 0.623);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.gray-bg {
+    background: hsla(235, 7%, 65%);
+    opacity: 0.15;
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -99;
+    border-bottom-left-radius: 100px;
+}
+
+/* end header */
+.section-1 {
+    width: 600px;
+    color: hsl(231, 7%, 65%);
+}
+
+.new {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-weight: 400;
+}
+
+.badge {
+    color: white;
+    background-color: hsl(230, 29%, 20%);
+    font-weight: 700;
+    padding: 3px 10px;
+    margin-right: 20px;
+    border-radius: 100px;
+}
+
+.section-1 h1 {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    margin: 20px 0;
+    color: hsl(230, 29%, 20%);
+}
+
+.section-1 .sub-title {
+    margin: 20px 0;
+}
+
+.section-1 .button-container {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.section-1 .button-container button {
+    background: hsl(0, 100%, 68%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    margin: 40px 0;
+    margin-right: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1.1px;
+}
+
+.section-1 .button-container button:hover {
+    background: hsla(0, 100%, 68%, 0.87);
+}
+
+main>.devices-img {
+    width: 50%;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 100px;
+}
+
+
+/* mobile menu */
+
+.menu-button {
+    cursor: pointer;
+    display: none;
+    border: none;
+}
+
+#menu,
+.btn-close {
+    display: none;
+}
+
+#menu {
+    position: absolute;
+    top: 30px;
+    left: -350px;
+    width: 330px;
+    font-size: 22px;
+    background: white;
+    padding: 30px;
+    border-radius: 3px;
+    box-shadow: 0px 3px 10px hsl(229deg 11% 40% / 84%);
+}
+
+#menu hr {
+    width: 100%;
+}
+
+#menu a {
+    margin-bottom: 10px;
+    color: hsl(230, 11%, 40%);
+    text-decoration: none;
+}
+
+#menu a:last-child {
+    color: hsl(231, 7%, 65%);
+}
+
+#menu a:hover {
+    text-decoration: underline;
+}
+
+.menu-button {
+    position: relative;
+}
+
+.menu-button:focus-within #menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-button:focus-within .btn-hamburger {
+    display: none;
+}
+
+.menu-button:focus-within .btn-close {
+    display: flex;
+}
+
+
+
+@media all and (max-width:850px) {
+    .gray-bg {
+        width: 280px;
+        height: 520px;
+    }
+}
+
+@media all and (max-width:530px) {
+    nav {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .section-1 {
+        width: auto;
+    }
+}
+
+@media all and (max-width:1220px) {
+    main>.devices-img {
+        width: 90%;
+    }
+}
+
+@media all and (max-width:1440px) {
+    body {
+        padding-left: 20px;
+    }
+
+    header {
+        padding-right: 20px;
+    }
+}
